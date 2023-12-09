@@ -15,6 +15,14 @@
       <h1>ShibaPixelPups Minting</h1>
     </header>
 
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Please connect to MetaMask to use this feature.</p>
+        <button onclick="connect()">Connect</button>
+      </div>
+    </div>
+
     <section id="mintSection">
       <p>ShibaPixelPups are collection of<br> 101 Cute PixelPuppies on Shibarium Blockchain. <br><br>Click the button below to mint your unique SPP NFT!</p>
       <button id="increaseCount" onclick="increaseCount()">+</button><wew id="countDisplay"><strong>1</strong></wew><button id="decreaseCount" onclick="decreaseCount()">-</button><button id="mintButton">Mint: <fetch id="cost">101</fetch> <strong>BONE</strong></button>

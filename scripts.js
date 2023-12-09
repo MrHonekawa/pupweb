@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mintingAnimation = document.getElementById('mintingAnimation');
   const checkNFTButton = document.getElementById('checkNFTButton');
   const nftIdInput = document.getElementById('nftId');
+  const modal = document.getElementById('myModal');
   const nftCardDiv = document.getElementById('nftCard');
 
   mintButton.addEventListener('click', () => {
@@ -79,16 +80,18 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  // Function to check if MetaMask is connected
-  if (typeof window.ethereum !== 'undefined' && window.ethereum.isConnected()) {
-    console.log('MetaMask is connected');
-    alert('none');
-    // connectButton.style.display = 'none'; // Hide connect button if connected
-  } else {
-    console.log('MetaMask is not connected');
-    alert('block');
-    // connectButton.style.display = 'block'; // Show connect button if not connected
-  }
+  modal.style.display = 'block';
+
+  // // Function to check if MetaMask is connected
+  // if (typeof window.ethereum !== 'undefined' && window.ethereum.isConnected()) {
+  //   console.log('MetaMask is connected');
+  //   alert('none');
+  //   // connectButton.style.display = 'none'; // Hide connect button if connected
+  // } else {
+  //   console.log('MetaMask is not connected');
+  //   alert('block');
+  //   // connectButton.style.display = 'block'; // Show connect button if not connected
+  // }
 
 });
 

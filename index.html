@@ -10,14 +10,6 @@
 <body>
   <div class="minting-container">
     <header>
-      <h1>Wallet</h1>
-    </header>
-    <section id="mintSection">
-      <p>In order to mint ShibariumPups please connect your wallet: <button id="increaseCount">Connect</button></p>
-    </section>
-  </div>
-  <div class="minting-container">
-    <header>
       <h1>ShibaPixelPups Minting</h1>
     </header>
 
@@ -29,7 +21,7 @@
 
     <section id="checkNFTSection">
       <h2>Check Minted NFT</h2>
-      <label for="nftId">Enter NFT ID:</label>
+      <button id="increaseCount" onclick="connect()">Connect</button>
       <input type="text" id="nftId" placeholder="Enter NFT ID">
       <button id="checkNFTButton">Check NFT</button>
       <div id="nftCard"></div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <title>NFT Minting</title>
+</head>
+<body>
+  <div class="minting-container">
+    <header>
+      <h1>ShibaPixelPups Minting</h1>
+    </header>
+
+    <section id="mintSection">
+      <p>ShibaPixelPups are collection of<br> 101 Cute PixelPuppies on Shibarium Blockchain. <br><br>Click the button below to mint your unique SPP NFT!</p>
+      <button id="increaseCount" onclick="increaseCount()">+</button><wew id="countDisplay"><strong>1</strong></wew><button id="decreaseCount" onclick="decreaseCount()">-</button><button id="mintButton">Mint: <fetch id="cost">101</fetch> <strong>BONE</strong></button>
+      <div id="mintingAnimation"></div>
+    </section>
+
+    <section id="checkNFTSection">
+      <h2>Check Minted NFT</h2>
+      <label for="nftId">Enter NFT ID:</label>
+      <input type="text" id="nftId" placeholder="Enter NFT ID">
+      <button id="checkNFTButton">Check NFT</button>
+      <div id="nftCard"></div>
+    </section>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

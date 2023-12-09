@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-  <script src="https://cdn.jsdelivr.net/npm/web3@1.8.0/dist/web3.min.js" integrity="sha256-1TLx50r3wQ52OlAm5jSfpTwbN9MJ51NysfLmsXmUPDk=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <title>NFT Minting</title>
 </head>
 <body>
@@ -15,16 +13,14 @@
       <h1>ShibaPixelPups Minting</h1>
     </header>
 
-    <div class="modal" id="myModal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <p>Please connect to MetaMask to use this feature.</p>
-        <button onclick="connect()">Connect</button>
-      </div>
-    </div>
+    <section id="connectWalletSection">
+      <h2>Connect Your Wallet</h2>
+      <p>To mint a ShibaPixelPup NFT, connect your wallet below:</p>
+      <button id="connectWalletButton">Connect Wallet</button>
+    </section>
 
     <section id="mintSection">
-      <p>ShibaPixelPups are collection of<br> 101 Cute PixelPuppies on Shibarium Blockchain. <br><br>Click the button below to mint your unique SPP NFT!</p>
+      <p>ShibaPixelPups are a collection of<br> 101 Cute PixelPuppies on the Shibarium Blockchain. <br><br>Click the button below to mint your unique SPP NFT!</p>
       <button id="increaseCount" onclick="increaseCount()">+</button><wew id="countDisplay"><strong>1</strong></wew><button id="decreaseCount" onclick="decreaseCount()">-</button><button id="mintButton">Mint: <fetch id="cost">101</fetch> <strong>BONE</strong></button>
       <div id="mintingAnimation"></div>
     </section>

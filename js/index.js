@@ -29,6 +29,7 @@ document.getElementById('connectWalletButton').onclick = async () => {
           console.log(result);
         });
       });
+      alert("MINTED!");
     }
 
     document.getElementById('checkNFT').onclick = async () => {

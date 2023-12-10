@@ -17,7 +17,7 @@ document.getElementById('connectWalletButton').onclick = async () => {
       console.log(result);
     });
 
-    function mint() {
+    document.getElementById('mint').onclick = async () => {
       // Replace this with your minting logic
       alert('Minting in progress...');
       var amount = 101 * 10**18;

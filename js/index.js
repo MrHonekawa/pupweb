@@ -30,5 +30,13 @@ document.getElementById('connectWalletButton').onclick = async () => {
         });
       });
     }
+
+    document.getElementById('checkNFT').onclick = async () => {
+      alert('CHECKING...')
+      var nftId = $('#nftId').val();
+      var check = pupNFT.methods.ownerOf(nftId).call({ from: shibaAddr }).then(function (result){
+        console.log(result);
+      });
+    }
   }
 }

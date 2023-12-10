@@ -16,5 +16,17 @@ document.getElementById('connectWalletButton').onclick = async () => {
       document.getElementById('mintedAmount').textContent = result;
       console.log(result);
     });
+
+    function mint() {
+      // Replace this with your minting logic
+      alert('Minting in progress...');
+      var mintPup = pupNFT.methods.mintRandomNFT(1).send({from: shibaAddr, value: 101 ether}).then( function(result){
+        alert('MINTED!');
+        var mintedAmount = pupNFT.methods.totalSupply().call({ from: shibaAddr }).then( function (result){
+          document.getElementById('mintedAmount').textContent = result;
+          console.log(result);
+        });
+      });
+    }
   }
 }

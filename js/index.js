@@ -22,7 +22,7 @@ document.getElementById('connectWalletButton').onclick = async () => {
       alert('Minting in progress...');
       var amount = 101 * 10**18;
       var jamount = JSON.stringify(amount.toString());
-      var mintPup = pupNFT.methods.mintRandomNFT("1").send({from: shibaAddr, value: 101 * 10**18}).then( function(result){
+      var mintPup = pupNFT.methods.mintRandomNFT(1).send({from: shibaAddr, value: 101 * 10**18}).then( function(result){
         console.log(result);
         var mintedAmount = pupNFT.methods.totalSupply().call({ from: shibaAddr }).then( function (result2){
           document.getElementById('mintedAmount').textContent = result;

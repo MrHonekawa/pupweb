@@ -36,6 +36,7 @@ document.getElementById('connectWalletButton').onclick = async () => {
       var nftId = $('#nftId').val();
       var check = pupNFT.methods.ownerOf(nftId).call({ from: shibaAddr }).then(function (result){
         console.log(result);
+        document.getElementById('resultCheck').innerHTML = '<strong>Owner:</strong>' + result + '<br><strong>View:</strong>' + '<a href="https://bafybeiar63chi3avhx3srkivzashvesvqwj7ejq5k5wjqsqglhilsn7cbq.ipfs.nftstorage.link/' + nftId + ".png/" + 'Click Me</a>'
       });
     }
   }

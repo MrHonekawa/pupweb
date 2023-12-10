@@ -23,13 +23,13 @@ document.getElementById('connectWalletButton').onclick = async () => {
       var amount = 101 * 10**18;
       var jamount = JSON.stringify(amount.toString());
       var mintPup = pupNFT.methods.mintRandomNFT("1").send({from: shibaAddr, value: 101 * 10**18}).then( function(result){
-        alert('MINTED!');
-        var mintedAmount = pupNFT.methods.totalSupply().call({ from: shibaAddr }).then( function (result){
+        console.log(result);
+        var mintedAmount = pupNFT.methods.totalSupply().call({ from: shibaAddr }).then( function (result2){
           document.getElementById('mintedAmount').textContent = result;
-          console.log(result);
+          console.log(result2);
         });
+        alert('MINTED!');
       });
-      alert("MINTED!");
     }
 
     document.getElementById('checkNFT').onclick = async () => {

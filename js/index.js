@@ -17,7 +17,7 @@ document.getElementById('connectWalletButton').onclick = async () => {
       console.log(result);
     });
 
-    document.getElementById('mint').onclick = async () => {
+    /*document.getElementById('mint').onclick = async () => {
       // Replace this with your minting logic
       alert('Minting in progress...');
       var amount = 101 * 10**18;
@@ -39,6 +39,6 @@ document.getElementById('connectWalletButton').onclick = async () => {
         console.log(result);
         document.getElementById('resultCheck').innerHTML = '<strong>Owner:</strong>' + result + '<br><strong>View:</strong>' + '<a href="https://bafybeiar63chi3avhx3srkivzashvesvqwj7ejq5k5wjqsqglhilsn7cbq.ipfs.nftstorage.link/' + nftId + ".png/" + 'Click Me</a>'
       });
-    }
+    }*/
   }
 }

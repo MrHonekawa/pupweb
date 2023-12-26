@@ -43,7 +43,7 @@ document.getElementById('connectWalletButton').onclick = async () => {
           } else {
             document.getElementById('resultCheck').innerHTML = '<strong>NFT has not been minted yet.</strong>'
           }
-        }
+        });
       });
     }
   }

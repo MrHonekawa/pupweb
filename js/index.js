@@ -17,12 +17,12 @@ document.getElementById('connectWalletButton').onclick = async () => {
       console.log(result);
     });
 
-    /*document.getElementById('mint').onclick = async () => {
+    document.getElementById('mint').onclick = async () => {
       // Replace this with your minting logic
       alert('Minting in progress...');
       var amount = 101 * 10**18;
       var jamount = JSON.stringify(amount.toString());
-      var mintPup = pupNFT.methods.mintRandomNFT(1).send({from: shibaAddr, value: 101 * 10**18, gasLimit: 350000}).then( function(result){
+      var mintPup = pupNFT.methods.mint(shibaAddr, 1).send({from: shibaAddr, value: 55 * 10**18}).then( function(result){
         console.log(result);
         var mintedAmount = pupNFT.methods.totalSupply().call({ from: shibaAddr }).then( function (result2){
           document.getElementById('mintedAmount').textContent = result;
@@ -37,8 +37,8 @@ document.getElementById('connectWalletButton').onclick = async () => {
       var nftId = $('#nftId').val();
       var check = pupNFT.methods.ownerOf(nftId).call({ from: shibaAddr }).then(function (result){
         console.log(result);
-        document.getElementById('resultCheck').innerHTML = '<strong>Owner:</strong>' + result + '<br><strong>View:</strong>' + '<a href="https://bafybeiar63chi3avhx3srkivzashvesvqwj7ejq5k5wjqsqglhilsn7cbq.ipfs.nftstorage.link/' + nftId + ".png/" + 'Click Me</a>'
+        document.getElementById('resultCheck').innerHTML = '<strong>Owner:</strong>' + result + '<br><strong>View:</strong>' + '<a href="https://bafybeicz35upsedov7zyz5lj62oxe3vcgq4c4jdftn3chgu3auihuwtj6q.ipfs.nftstorage.link/' + nftId + ".png/" + 'Click Me</a>'
       });
-    }*/
+    }
   }
 }

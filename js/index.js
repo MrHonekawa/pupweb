@@ -36,8 +36,14 @@ document.getElementById('connectWalletButton').onclick = async () => {
       alert('CHECKING...')
       var nftId = $('#nftId').val();
       var check = pupNFT.methods.ownerOf(nftId).call({ from: shibaAddr }).then(function (result){
-        console.log(result);
-        document.getElementById('resultCheck').innerHTML = '<strong>Owner:</strong>' + result + '<br><strong>View:</strong>' + '<a href="https://bafybeicz35upsedov7zyz5lj62oxe3vcgq4c4jdftn3chgu3auihuwtj6q.ipfs.nftstorage.link/' + nftId + ".png/" + 'Click Me</a>'
+        var doesExist = pupNFT.methods.totalSupply().call({ from: shibaAddr }).then(function (result2){
+          if(nftId < result2){
+            console.log(result);
+            document.getElementById('resultCheck').innerHTML = '<strong>Owner:</strong>' + result + '<br><strong>View:</strong>' + '<a href="https://bafybeicz35upsedov7zyz5lj62oxe3vcgq4c4jdftn3chgu3auihuwtj6q.ipfs.nftstorage.link/' + nftId + ".png/" + 'Click Me</a>'
+          } else {
+            document.getElementById('resultCheck').innerHTML = '<strong>NFT has not been minted yet.</strong>'
+          }
+        }
       });
     }
   }

@@ -17,6 +17,11 @@ document.getElementById('connectWalletButton').onclick = async () => {
       console.log(result);
     });
 
+    var youHold = pupNFT.methods.walletOfOwner(shibaAddr).call({ from: shibaAddr }).then(function(result){
+      document.getElementById('resultCheck').innerHTML = '<strong>You Hold IDs:' + result + '</strong>'
+      console.log(result);
+    });
+
     document.getElementById('mint').onclick = async () => {
       // Replace this with your minting logic
       alert('Minting in progress...');

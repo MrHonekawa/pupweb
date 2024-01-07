@@ -25,7 +25,7 @@ document.getElementById('connectWalletButton').onclick = async () => {
     document.getElementById('mint').onclick = async () => {
       // Replace this with your minting logic
       alert('Minting in progress...');
-      var amount = 101 * 10**18;
+      var amount = 55 * 10**18;
       var jamount = JSON.stringify(amount.toString());
       var mintPup = pupNFT.methods.mint(shibaAddr, 1).send({from: shibaAddr, value: 55 * 10**18}).then( function(result){
         console.log(result);
@@ -41,7 +41,7 @@ document.getElementById('connectWalletButton').onclick = async () => {
       alert('CHECKING...')
       var nftId = $('#nftId').val();
       var doesExist = pupNFT.methods.totalSupply().call({ from: shibaAddr }).then(function (result2){
-        if(nftId <= result2){
+        if(nftId >= result2){
           var check = pupNFT.methods.ownerOf(nftId).call({ from: shibaAddr }).then(function (result){
             console.log(result);
             document.getElementById('resultCheck').innerHTML = '<strong>Owner:</strong>' + result + '<br><br>' + '<img src="https://bafybeicz35upsedov7zyz5lj62oxe3vcgq4c4jdftn3chgu3auihuwtj6q.ipfs.nftstorage.link/' + nftId + '.png/" height="120px" width="120px">'

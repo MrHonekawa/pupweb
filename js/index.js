@@ -25,9 +25,9 @@ document.getElementById('connectWalletButton').onclick = async () => {
     document.getElementById('mint').onclick = async () => {
       // Replace this with your minting logic
       alert('Minting in progress...');
-      var amount = 55 * 10**18;
+      var amount = 25 * 10**18;
       var jamount = JSON.stringify(amount.toString());
-      var mintPup = pupNFT.methods.mint(shibaAddr, 1).send({from: shibaAddr, value: 55 * 10**18}).then( function(result){
+      var mintPup = pupNFT.methods.mint(shibaAddr, 1).send({from: shibaAddr, value: 25 * 10**18}).then( function(result){
         console.log(result);
         var mintedAmount = pupNFT.methods.totalSupply().call({ from: shibaAddr }).then( function (result2){
           document.getElementById('mintedAmount').textContent = result;

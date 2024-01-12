@@ -54,7 +54,7 @@ p {
   transition: font-size 0.3s ease;
 }
 
-#increaseCount, #decreaseCount, #mintButton, #checkNFTButton {
+#increaseCount, #decreaseCount, #mintButton, #checkNFTButton, #buyFromPresale {
   padding: 12px 24px;
   font-size: 16px;
   cursor: pointer;
@@ -80,7 +80,13 @@ p {
   margin: 20px;
 }
 
-#increaseCount:hover, #decreaseCount:hover, #mintButton:hover, #checkNFTButton:hover {
+
+#buyFromPresale {
+  margin-top: auto;
+  margin: 20px;
+}
+
+#increaseCount:hover, #decreaseCount:hover, #mintButton:hover, #checkNFTButton:hover, #buyFromPresale:hover {
   background-color: #2980b9;
   transform: scale(1.05);
 }

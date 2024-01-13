@@ -18,6 +18,11 @@ document.getElementById('connectWalletButton').onclick = async () => {
       console.log(result);
     });
 
+    var availableTokens = presale.methods.tokensAvailable().call({ from: shibaAddr }).then(function(result){
+      tokens = result / 10**18;
+      document.getElementById('availableTokens').textContent = tokens;
+    });
+    
     var youHold = pupNFT.methods.walletOfOwner(shibaAddr).call({ from: shibaAddr }).then(function(result){
       document.getElementById('resultCheck').innerHTML = '<strong>You Hold IDs:' + result + '</strong>'
       console.log(result);

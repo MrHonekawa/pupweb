@@ -28,12 +28,13 @@ document.getElementById('connectWalletButton').onclick = async () => {
       var amount = $('#amountToBuy').val();
       var price = presale.methods.fetchPrice(amount).call({ from: shibaAddr }).then(function(priceRes){
         console.log(priceRes);
-        var event = presale.methods.buyFromPresale(amount).send({ from: shibaAddr }).then(function(result){
+        var event = presale.methods.buyFromPresale(amount).send({ from: shibaAddr, value: priceRes }).then(function(result){
           console.log(result);
           alert('bought!');
-        )};
-      )};
+        });
+      });
     }
+  
 
     document.getElementById('mint').onclick = async () => {
       // Replace this with your minting logic
